@@ -1,0 +1,353 @@
+/* alice.base 样式模块 */
+
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {
+    color:#000;background:#fff;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+* {
+    font-family: "微软雅黑";
+}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    margin:0;padding:0;
+}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+/* HTML5 媒体文件跟 img 保持一致 */
+audio,canvas,video {
+    display: inline-block;*display: inline;*zoom: 1;
+}
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+body,button,input,select,textarea {
+    font:12px/1.5 tahoma,arial,"Hiragino Sans GB",\5b8b\4f53;
+}
+input,select,textarea {
+    font-size:100%;
+}
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+table {
+    border-collapse:collapse;border-spacing:0;
+}
+
+/* IE bug fixed: th 不继承 text-align*/
+th {
+    text-align:inherit;
+}
+
+/* 去除默认边框 */
+fieldset,img {
+    border:0;
+}
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+    display:block;
+}
+
+/* 去掉 firefox 下此元素的边框 */
+abbr,acronym {
+    border:0;font-variant:normal;
+}
+
+/* 一致的 del 样式 */
+del {
+    text-decoration:line-through;
+}
+
+address,caption,cite,code,dfn,em,th,var {
+    font-style:normal;
+    font-weight:500;
+}
+
+/* 去掉列表前的标识, li 会继承 */
+ol,ul {
+    list-style:none;
+}
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,th {
+    text-align:left;
+}
+
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:500;
+}
+
+q:before,q:after {
+    content:'';
+}
+
+/* 统一上标和下标 */
+sub, sup {
+    font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+a{color:#333}
+
+/* 正常链接 未访问 */
+a:link {
+    /*color: #08c;*/
+}
+
+/* 鼠标悬停 */
+a:hover {
+    color:#f55c0c;
+    text-decoration: underline;
+}
+
+/* 默认不显示下划线，保持页面简洁 */
+ins,a {
+    text-decoration:none;
+}
+
+/* 代码字体 */
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+/* 清理浮动 */
+.clearfix:after {
+    visibility:hidden;
+    display:block;
+    font-size:0;
+    content:" ";
+    clear:both;
+    height:0;
+}
+.clearfix {
+    zoom:1; /* for IE6 IE7 */
+}
+
+/* 隐藏, 通常用来与 JS 配合 */
+body .fn-hide {
+    display:none;
+}
+
+/* 设置内联, 减少浮动带来的bug */
+.fn-left,
+.fn-right {
+    display:inline;
+}
+.fn-left {
+    float:left;
+}
+.fn-right {
+    float:right;
+}
+
+/* 单行文字溢出时出现省略号，需设定宽度 */ 
+.fn-text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 简单的渐变 */
+.fn-linear {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f1f1f1));
+    background: -moz-linear-gradient(top, #fcfcfc, #f1f1f1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f1f1f1');
+    background:-o-linear-gradient(top, #fcfcfc, #f1f1f1);
+    background:-ms-linear-gradient(top, #fcfcfc, #f1f1f1);
+    background: linear-gradient(to bottom, #fcfcfc, #f1f1f1);
+}
+
+/* 浅色的渐变 */
+.fn-linear-light {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f9f9f9));
+    background: -moz-linear-gradient(top, #fcfcfc, #f9f9f9);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f9f9f9');
+    background:-o-linear-gradient(top, #fcfcfc, #f9f9f9);
+    background:-ms-linear-gradient(top, #fcfcfc, #f9f9f9);
+    background: linear-gradient(to bottom, #fcfcfc, #f9f9f9);
+}
+
+/* 人民币符号 */
+.fn-rmb {
+    font-family: arial;
+    font-style: normal;
+    padding-right: 4px;
+}
+
+
+/* chrome 下字体过小的问题 */
+.fn-webkit-adjust {
+    -webkit-text-size-adjust: none;
+}
+
+/*变成块元素*/
+
+.fn-dn{display:none}
+.fn-block{
+	display:block;
+}
+
+/**/
+.fn-tac{text-align:center}
+.fn-tar{text-align:right}
+.fn-tal{text-align:left}
+
+.fts14{font-size:14px}
+.fts16{font-size:16px}
+.fts18{font-size:18px}
+.fn-block{display:block}
+.ff-yh{font-family:'微软雅黑'}
+.fc-333{color:#333}
+.lh24{line-height:24px}
+.lh25{line-height:25px}
+.lh26{line-height:26px}
+.lh28{line-height:28px}
+
+
+.fn-pos-r{position:relative}
+
+
+/*通用的边距*/
+
+input ,textarea{outline:none}
+
+.mt2{margin-top:2px}
+.mr2{margin-right:2px}
+.mb2{margin-bottom:2px}
+.ml2{margin-left:2px}
+
+.mt3{margin-top:3px}
+.mr3{margin-right:3px}
+.mb3{margin-bottom:3px}
+.ml3{margin-left:3px}
+
+.mt4{margin-top:4px}
+.mr4{margin-right:4px}
+.mb4{margin-bottom:4px}
+.ml4{margin-left:4px}
+
+.mt5{margin-top:5px}
+.mr5{margin-right:5px}
+.mb5{margin-bottom:5px}
+.ml5{margin-left:5px}
+
+.mt6{margin-top:6px}
+.mr6{margin-right:6px}
+.mb6{margin-bottom:6px}
+.ml6{margin-left:6px}
+
+.mt7{margin-top:7px}
+.mr7{margin-right:7px}
+.mb7{margin-bottom:7px}
+.ml7{margin-left:7px}
+
+.mt8{margin-top:8px}
+.mr8{margin-right:8px}
+.mb8{margin-bottom:8px}
+.ml8{margin-left:8px}
+
+.mt9{margin-top:9px}
+.mr9{margin-right:9px}
+.mb9{margin-bottom:9px}
+.ml9{margin-left:9px}
+
+.mt10{margin-top:10px}
+.mr10{margin-right:10px}
+.mb10{margin-bottom:10px}
+.ml10{margin-left:10px}
+
+.mt12{margin-top:12px}
+.mr12{margin-right:12px}
+.mb12{margin-bottom:12px}
+.ml12{margin-left:12px}
+
+.mt15{margin-top:15px}
+.mr15{margin-right:15px}
+.mb15{margin-bottom:15px}
+.ml15{margin-left:15px}
+
+
+.pt2{padding-top:2px}
+.pr2{padding-right:2px}
+.pb2{padding-bottom:2px}
+.pl2{padding-left:2px}
+
+.pt3{padding-top:3px}
+.pr3{padding-right:3px}
+.pb3{padding-bottom:3px}
+.pl3{padding-left:3px}
+
+.pt4{padding-top:4px}
+.pr4{padding-right:4px}
+.pb4{padding-bottom:4px}
+.pl4{padding-left:4px}
+
+.pt5{padding-top:5px}
+.pr5{padding-right:5px}
+.pb5{padding-bottom:5px}
+.pl5{padding-left:5px}
+
+.pt6{padding-top:6px}
+.pr6{padding-right:6px}
+.pb6{padding-bottom:6px}
+.pl6{padding-left:6px}
+
+.pt7{padding-top:7px}
+.pr7{padding-right:7px}
+.pb7{padding-bottom:7px}
+.pl7{padding-left:7px}
+
+.pt8{padding-top:8px}
+.pr8{padding-right:8px}
+.pb8{padding-bottom:8px}
+.pl8{padding-left:8px}
+
+.pt9{padding-top:9px}
+.pr9{padding-right:9px}
+.pb9{padding-bottom:9px}
+.pl9{padding-left:9px}
+
+.pt10{padding-top:10px}
+.pr10{padding-right:10px}
+.pb10{padding-bottom:10px}
+.pl10{padding-left:10px}
+
+.pt12{padding-top:12px}
+.pr12{padding-right:12px}
+.pb12{padding-bottom:12px}
+.pl12{padding-left:12px}
+
+.pt15{padding-top:15px}
+.pr15{padding-right:15px}
+.pb15{padding-bottom:15px}
+.pl15{padding-left:15px}
+
+.pt20{padding-top:20px}
+.pr20{padding-right:20px}
+.pb20{padding-bottom:20px}
+.pl20{padding-left:20px}
+
+.pt30{padding-top:30px}
+.pr30{padding-right:30px}
+.pb30{padding-bottom:30px}
+.pl30{padding-left:30px}
+
+.valign{vertical-align:middle}
+
+table{border-collapse:collapse;border:none}
+
+.oneLine li{white-space:nowrap;overflow:hidden}
+.fn-dib{display:inline-block;*zoom:1}
+.fn-dibv{display:inline-block;*zoom:1;vertical-align:middle}

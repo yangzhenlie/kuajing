@@ -1,0 +1,210 @@
+<title>详情页-潜冠科技有限公司</title>
+
+<style>
+/*图片放大镜样式*/
+.jqzoom{float:left;border:none;position:relative;padding:0px;cursor:pointer;margin:0px;display:block;}
+.zoomdiv{z-index:100;position:absolute;top:0px;left:0px;width:350px;height:350px;background:#ffffff;border:1px solid #CCCCCC;display:none;text-align:center;overflow:hidden;}
+.jqZoomPup{z-index:10;visibility:hidden;position:absolute;top:0px;left:0px;width:20px;height:20px;border:1px solid #aaa;background:#ffffff;opacity: 0.5;-moz-opacity: 0.5;-khtml-opacity: 0.5;filter: alpha(Opacity=50);}
+/*图片小图预览列表*/
+.spec-preview{width:350px;height:350px;border:1px solid #DFDFDF;}
+.spec-scroll{clear:both;margin-top:5px;width:352px;}
+.spec-scroll .prev{float:left;margin-right:4px;}
+.spec-scroll .next{float:right;}
+.spec-scroll .prev,.spec-scroll .next{display:block;font-family:"宋体";text-align:center;width:10px;height:54px; line-height:54px;border:1px solid #CCC;background:#EBEBEB;cursor:pointer;text-decoration:none;}
+.spec-scroll .items{float:left;position:relative;width:322px;height:56px;overflow:hidden;}
+.spec-scroll .items ul{position:absolute;width:999999px;height:56px;}
+.spec-scroll .items ul li{float:left;width:64px;text-align:center;}
+.spec-scroll .items ul li img{border:1px solid #CCC;padding:2px;width:50px;height:50px;}
+.spec-scroll .items ul li img:hover{border:2px solid #FF6600;padding:1px;}
+</style>
+
+<script src="js/jquery.jqzoom.js"></script>
+<script src="js/base.js"></script>
+<script>
+	$(function(){
+
+		$(".transit-box input").change(function(){
+			if( $("#ys2").prop("checked") ){
+				$(".cost-time").show();
+			}else{
+				$(".cost-time").hide();
+			}
+		});
+
+	})
+</script>
+
+<div class="pro-box wrap clearfix">
+
+	<!-- 左边 -->
+	<div class="pro-left fn-left">
+		<div class="pro-panel">
+			<div class="title">产品分类</div>
+			<ul class="classify-box">
+				<li><a href="#list">原味牛排</a></li>
+				<li><a href="#list">进口牛肉</a></li>
+				<li><a href="#list">进口猪肉</a></li>
+				<li><a href="#list">西班牙火腿</a></li>
+				<li><a href="#list">进口禽类</a></li>
+				<li><a href="#list">进口羊肉</a></li>
+				<li><a href="#list">宅配套餐</a></li>
+			</ul>
+		</div>
+		<div class="buy-record pro-panel">
+			<div class="title">商品购买记录</div>
+			<ul class="buy-record-box">
+				<li>
+					<img src="images/overlayImg1.jpg" />
+					<p>
+						<a href="">澳洲雪花西冷|厚切牛排</a>
+					</p>
+				</li>
+				<li>
+					<img src="images/overlayImg1.jpg" />
+					<p>
+						<a href="">澳洲雪花西冷|厚切牛排</a>
+					</p>
+				</li>
+				<li>
+					<img src="images/overlayImg1.jpg" />
+					<p>
+						<a href="">澳洲雪花西冷|厚切牛排</a>
+					</p>
+				</li>
+				<li>
+					<img src="images/overlayImg1.jpg" />
+					<p>
+						<a href="">澳洲雪花西冷|厚切牛排</a>
+					</p>
+				</li>
+				<li>
+					<img src="images/overlayImg1.jpg" />
+					<p>
+						<a href="">澳洲雪花西冷|厚切牛排</a>
+					</p>
+				</li>
+				<li>
+					<img src="images/overlayImg1.jpg" />
+					<p>
+						<a href="">澳洲雪花西冷|厚切牛排</a>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 右边 -->
+	<div class="pro-right fn-right">
+		
+		<!-- 商品信息 -->
+		<div class="product-essential clearfix">
+			<div class="product-img-box fn-left">
+				<!--产品参数开始-->
+				<div>
+				    <div id="preview" class="spec-preview">
+				      <span class="jqzoom"><img jqimg="images/b1.jpg" src="images/s1.jpg" /></span>
+				    </div>
+				    <!--缩图开始-->
+				    <div class="spec-scroll"> <a class="prev">&lt;</a> <a class="next">&gt;</a>
+				      <div class="items">
+				        <ul>
+				          <li><img alt="佳能" bimg="images/b1.jpg" src="images/s1.jpg" onmousemove="preview(this);"></li>
+				          <li><img alt="佳能" bimg="images/b2.jpg" src="images/s2.jpg" onmousemove="preview(this);"></li>
+				          <li><img alt="佳能" bimg="images/b3.jpg" src="images/s3.jpg" onmousemove="preview(this);"></li>
+				          <li><img alt="佳能" bimg="images/b1.jpg" src="images/s1.jpg" onmousemove="preview(this);"></li>
+				          <li><img alt="佳能" bimg="images/b3.jpg" src="images/s3.jpg" onmousemove="preview(this);"></li>
+				          <li><img alt="佳能" bimg="images/b1.jpg" src="images/s1.jpg" onmousemove="preview(this);"></li>
+				          <li><img alt="佳能" bimg="images/b2.jpg" src="images/s2.jpg" onmousemove="preview(this);"></li>
+				          <li><img alt="佳能" bimg="images/b1.jpg" src="images/s1.jpg" onmousemove="preview(this);"></li>
+				          <li><img alt="佳能" bimg="images/b2.jpg" src="images/s2.jpg" onmousemove="preview(this);"></li>
+				          <li><img alt="佳能" bimg="images/b2.jpg" src="images/s2.jpg" onmousemove="preview(this);"></li>
+				          <li><img alt="佳能" bimg="images/b1.jpg" src="images/s1.jpg" onmousemove="preview(this);"></li>
+				          <li><img alt="佳能" bimg="images/b2.jpg" src="images/s2.jpg" onmousemove="preview(this);"></li>
+				        </ul>
+				      </div>
+				    </div>
+				    <!--缩图结束-->
+				</div>
+				<!--产品参数结束-->
+			</div>
+			<div class="product-shop fn-left">
+				<div class="product-name">
+					<h2>澳洲雪花西冷|厚切牛排</h2>
+				</div>
+				<div class="price-box">
+					<p class="old-price">
+						<span class="price-label">原价：</span> <span class="price">￥360.00</span>
+					</p>
+					<p class="special-price">
+						<span>体验价：</span>
+						<span class="price-t">￥248.00</span>
+					</p>
+				</div>
+				<div>
+					<span>到港日期：2015年12月12日</span>
+				</div>
+				<div>
+					<span>生产日期：2015年12月12日</span>
+				</div>
+				<!-- <div>
+					规格：
+					<select>
+						<option>0.9~1.0kg</option>
+						<option>1.0~1.1kg</option>
+						<option>1.1~1.2kg</option>
+						<option>1.2~1.3kg</option>
+						<option>1.3~1.4kg</option>
+					</select>
+				</div> -->
+				<div class="transit-box">
+					运输方式：
+					<label for="ys1">
+						<input type="radio" id="ys1" name="transit" checked />自提
+					</label>
+					<label for="ys2">
+						<input type="radio" id="ys2" name="transit" />配送
+					</label>
+				</div>
+				<div class="cost-time">
+					运费：
+					<select>
+						<option>当天送到0元运费</option>
+						<option>2天送到10元运费</option>
+						<option>3天送到20元运费</option>
+						<option>4天送到30元运费</option>
+					</select>
+				</div>
+            	<div class="clearfix">
+            		<span class="fn-left">数量：</span>
+            		<div class="num-input fn-left">
+            			<span class="num-del">-</span><input type="text" value="0" /><span class="num-add">+</span>
+            		</div>
+            	</div>
+            	<div class="mt15 pro-buy">
+            		<a href="#cart">立即购买</a>
+            		<a href="">加入购物车</a>
+            	</div>
+            	<!-- 百度分享 -->
+            	<div class="mt15">
+            		<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+            	</div>
+            	<!-- 百度分享 -->
+			</div>
+		</div>
+
+		<ul class="pro-tab clearfix">
+			<li class="active"><a href="javascript:;"> 描述</a></li>
+			<li><a href="javascript:;"> 客户评论</a></li>
+			<li><a href="javascript:;"> 产品问答</a></li>
+	    </ul>
+
+	    <div class="pro-description">
+	    	<img src="images/pro-info.jpg" />
+	    	<img src="images/pro-info.jpg" />
+	    	<img src="images/pro-info.jpg" />
+	    	<img src="images/pro-info.jpg" />
+	    </div>
+
+	</div>
+</div>

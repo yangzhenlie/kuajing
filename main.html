@@ -1,0 +1,407 @@
+<title>跨境电商-潜冠科技有限公司</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<script src="js/jquery.banner.js"></script>
+<script>
+	$(function(){
+
+		$(".banner").swBanner();
+
+		$(".more-category-title li").click(function(){
+			$(this).addClass("active").siblings().removeClass("active");
+		});
+
+		$(".more-category-title ul").css("width", $(".more-category-title li").outerWidth()*($(".more-category-title li").length+2));
+
+		$(".more-category-title .next").click(function(){
+			var _width = $(this).parents(".more-category-title").find("li").outerWidth();
+			var _left = parseInt( $(this).parents(".more-category-title").find("ul").css("left") );
+			var _length = $(this).parents(".more-category-title").find("li").length;
+			var _ul = $(this).parents(".more-category-title").find("ul");
+
+			if( _left > -(_width*_length)+1090 ){
+				_ul.stop().animate({
+					left : -_width + _left + "px"
+				},200);
+			}
+		});
+
+		$(".more-category-title .prev").click(function(){
+			var _width = $(this).parents(".more-category-title").find("li").outerWidth();
+			var _left = parseInt( $(this).parents(".more-category-title").find("ul").css("left") );
+			var _ul = $(this).parents(".more-category-title").find("ul");
+
+			if( _left < -_width ){
+				_ul.stop().animate({
+					left : _width + _left + "px"
+				},200);
+			}
+			if( _left < 0 ){
+				_ul.stop().animate({
+					left : "0px"
+				},200);
+			}
+		});
+
+	})
+</script>
+
+<!-- 幻灯片 -->
+<div class="banner pb15">
+	<ul class="banList">
+		<li class="active"><a href="#list"><img src="images/banner1.jpg"/></a></li>
+		<li><a href="#list"><img src="images/banner2.jpg"/></a></li>
+		<li><a href="#list"><img src="images/banner1.jpg"/></a></li>
+		<li><a href="#list"><img src="images/banner2.jpg"/></a></li>
+	</ul>
+	<div class="fomW">
+		<div class="jsNav">
+			<a href="javascript:;" class="trigger current"></a>
+			<a href="javascript:;" class="trigger"></a>
+			<a href="javascript:;" class="trigger"></a>
+			<a href="javascript:;" class="trigger"></a>
+		</div>
+	</div>
+</div>
+
+<!-- 条目 -->
+<div class="category-title wrap">
+	<a href="#list">
+		<h3>NEW ARRIVAL | 新品推荐</h3>
+	</a>
+</div>
+
+<!-- 新品推荐 -->
+<div class="neo-category-box wrap">
+	<ul class="clearfix">
+		<li>
+			<figure class="overlay-img xp-effect">
+				<img src="images/pro-info.jpg" alt="">
+				<figcaption>
+					<h4>澳大利亚进口和牛t骨牛排</h4>
+					<p>和牛的肉多汁细嫩、肌肉脂肪中饱和脂肪酸含量很低，风味独特，肉用价值极高。是全世界公认的最优秀的优良肉用牛品种。特点是，生长快、成熟早、肉质好。第七、八肋间眼肌面积达52平方厘米。</p>
+				</figcaption>			
+			</figure>
+			<div class="section-box">
+				<p class="neo-home-proname fn-text-overflow">
+					<a href="#product" title="西班牙原装白猪猪舌">西班牙原装白猪猪舌</a>
+				</p>
+				<p class="neo-short-desc fn-text-overflow">猪舌可用于酱、烧、烩，如“酱猪舌”、“红烧舌片”、“烧杂烩”等。某些市场卖的舌头是熟的立即可食，但生的、烟熏的或粗盐腌的舌头常买到，煮后不论热用冷食、加不加调味料都不错。盐腌舌头通常是挤过汁的煮熟切片，一般采冷食，生舌头可加葡萄酒温煮，或水煮后添各类配饰上桌。</p>
+				<div class="neo-price clearfix">
+					<span class="fn-left">
+						<i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-no"></i>
+					</span>
+					<span class="fn-right neo-price-num">￥258.00</span>
+				</div>
+			</div>
+		</li>
+		<li class="middel-category-box">
+			<figure class="overlay-img xp-effect">
+				<img src="images/pro-info.jpg" alt="">
+				<figcaption>
+					<h4>澳大利亚进口和牛t骨牛排</h4>
+					<p>和牛的肉多汁细嫩、肌肉脂肪中饱和脂肪酸含量很低，风味独特，肉用价值极高。是全世界公认的最优秀的优良肉用牛品种。特点是，生长快、成熟早、肉质好。第七、八肋间眼肌面积达52平方厘米。</p>
+				</figcaption>			
+			</figure>
+			<div class="section-box">
+				<p class="neo-home-proname fn-text-overflow">
+					<a href="#product" title="西班牙原装白猪猪舌">西班牙原装白猪猪舌</a>
+				</p>
+				<p class="neo-short-desc fn-text-overflow">猪舌可用于酱、烧、烩，如“酱猪舌”、“红烧舌片”、“烧杂烩”等。某些市场卖的舌头是熟的立即可食，但生的、烟熏的或粗盐腌的舌头常买到，煮后不论热用冷食、加不加调味料都不错。盐腌舌头通常是挤过汁的煮熟切片，一般采冷食，生舌头可加葡萄酒温煮，或水煮后添各类配饰上桌。</p>
+				<div class="neo-price clearfix">
+					<span class="fn-left">
+						<i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-no"></i>
+					</span>
+					<span class="fn-right neo-price-num">￥258.00</span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<figure class="overlay-img xp-effect">
+				<img src="images/pro-info.jpg" alt="">
+				<figcaption>
+					<h4>澳大利亚进口和牛t骨牛排</h4>
+					<p>和牛的肉多汁细嫩、肌肉脂肪中饱和脂肪酸含量很低，风味独特，肉用价值极高。是全世界公认的最优秀的优良肉用牛品种。特点是，生长快、成熟早、肉质好。第七、八肋间眼肌面积达52平方厘米。</p>
+				</figcaption>			
+			</figure>
+			<div class="section-box">
+				<p class="neo-home-proname fn-text-overflow">
+					<a href="#product" title="西班牙原装白猪里脊肉">西班牙原装白猪里脊肉</a>
+				</p>
+				<p class="neo-short-desc fn-text-overflow">西班牙原装进口白猪里脊肉700g</p>
+				<div class="neo-price clearfix">
+					<span class="fn-left">
+						<i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-no"></i>
+					</span>
+					<span class="fn-right neo-price-num">￥258.00</span>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<div class="category-title wrap">
+	<a href="#list">
+		<h3>热销推荐</h3>
+	</a>
+</div>
+
+<!-- 原装进口海鲜 -->
+<div class="neo-category-box wrap">
+	<ul class="clearfix">
+		<li>
+			<div class="overlay-img scale-img">
+				<img src="images/overlayImg5.jpg" alt="">
+				<a href="" class="btn">点击浏览</a>
+			</div>
+			<div class="section-box">
+				<p class="neo-home-proname fn-text-overflow">
+					<a href="#product" title="澳大利亚进口和牛t骨牛排">澳大利亚进口和牛t骨牛排</a>
+				</p>
+				<p class="neo-short-desc fn-text-overflow">和牛的肉多汁细嫩、肌肉脂肪中饱和脂肪酸含量很低，风味独特，肉用价值极高。是全世界公认的最优秀的优良肉用牛品种。特点是，生长快、成熟早、肉质好。第七、八肋间眼肌面积达52平方厘米。</p>
+				<div class="neo-price clearfix">
+					<span class="fn-left">
+						<i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-no"></i>
+					</span>
+					<span class="fn-right neo-price-num">￥258.00</span>
+				</div>
+			</div>
+		</li>
+		<li class="middel-category-box">
+			<div class="overlay-img scale-img">
+				<img src="images/overlayImg5.jpg" alt="">
+				<a href="" class="btn">点击浏览</a>
+			</div>
+			<div class="section-box">
+				<p class="neo-home-proname fn-text-overflow">
+					<a href="#product" title="西班牙原装白猪猪舌">西班牙原装白猪猪舌</a>
+				</p>
+				<p class="neo-short-desc fn-text-overflow">猪舌可用于酱、烧、烩，如“酱猪舌”、“红烧舌片”、“烧杂烩”等。某些市场卖的舌头是熟的立即可食，但生的、烟熏的或粗盐腌的舌头常买到，煮后不论热用冷食、加不加调味料都不错。盐腌舌头通常是挤过汁的煮熟切片，一般采冷食，生舌头可加葡萄酒温煮，或水煮后添各类配饰上桌。</p>
+				<div class="neo-price clearfix">
+					<span class="fn-left">
+						<i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-no"></i>
+					</span>
+					<span class="fn-right neo-price-num">￥258.00</span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="overlay-img scale-img">
+				<img src="images/overlayImg5.jpg" alt="">
+				<a href="" class="btn">点击浏览</a>
+			</div>
+			<div class="section-box">
+				<p class="neo-home-proname fn-text-overflow">
+					<a href="#product" title="西班牙原装白猪里脊肉">西班牙原装白猪里脊肉</a>
+				</p>
+				<p class="neo-short-desc fn-text-overflow">西班牙原装进口白猪里脊肉700g</p>
+				<div class="neo-price clearfix">
+					<span class="fn-left">
+						<i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-no"></i>
+					</span>
+					<span class="fn-right neo-price-num">￥258.00</span>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+
+
+
+
+
+
+<!-- 条目 -->
+<div class="more-category-title wrap clearfix">
+	<span class="prev fn-left" title="向左"></span>
+	<div class="list fn-left">
+		<ul class="clearfix">
+			<li class="active">进口牛排0</li>
+			<li>进口牛排1</li>
+			<li>进口牛排2</li>
+			<li>进口牛排3</li>
+			<li>进口牛排4</li>
+			<li>进口牛排5</li>
+			<li>进口牛排6</li>
+			<li>进口牛排7</li>
+			<li>进口牛排8</li>
+			<li>进口牛排9</li>
+			<li>进口牛排1</li>
+			<li>进口牛排1</li>
+			<li>进口牛排1</li>
+			<li>进口牛排1</li>
+			<li>进口牛排1</li>
+		</ul>
+	</div>
+	<span class="next fn-right" title="向右"></span>
+</div>
+
+<!-- 原装进口牛排 -->
+<div class="neo-category-box wrap">
+	<ul class="clearfix">
+		<li>
+			<div class="overlay-img scale-img">
+				<img src="images/overlayImg1.jpg" alt="">
+				<a href="" class="btn">点击浏览</a>
+			</div>
+			<div class="section-box">
+				<p class="neo-home-proname fn-text-overflow">
+					<a href="#product" title="澳大利亚进口和牛t骨牛排">澳大利亚进口和牛t骨牛排</a>
+				</p>
+				<p class="neo-short-desc fn-text-overflow">和牛的肉多汁细嫩、肌肉脂肪中饱和脂肪酸含量很低，风味独特，肉用价值极高。是全世界公认的最优秀的优良肉用牛品种。特点是，生长快、成熟早、肉质好。第七、八肋间眼肌面积达52平方厘米。</p>
+				<div class="neo-price clearfix">
+					<span class="fn-left">
+						<i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-no"></i>
+					</span>
+					<span class="fn-right neo-price-num">￥258.00</span>
+				</div>
+			</div>
+		</li>
+		<li class="middel-category-box">
+			<div class="overlay-img scale-img">
+				<img src="images/overlayImg2.jpg" alt="">
+				<a href="" class="btn">点击浏览</a>
+			</div>
+			<div class="section-box">
+				<p class="neo-home-proname fn-text-overflow">
+					<a href="#product" title="西班牙原装白猪猪舌">西班牙原装白猪猪舌</a>
+				</p>
+				<p class="neo-short-desc fn-text-overflow">猪舌可用于酱、烧、烩，如“酱猪舌”、“红烧舌片”、“烧杂烩”等。某些市场卖的舌头是熟的立即可食，但生的、烟熏的或粗盐腌的舌头常买到，煮后不论热用冷食、加不加调味料都不错。盐腌舌头通常是挤过汁的煮熟切片，一般采冷食，生舌头可加葡萄酒温煮，或水煮后添各类配饰上桌。</p>
+				<div class="neo-price clearfix">
+					<span class="fn-left">
+						<i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-no"></i>
+					</span>
+					<span class="fn-right neo-price-num">￥258.00</span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="overlay-img scale-img">
+				<img src="images/overlayImg3.jpg" alt="">
+				<a href="" class="btn">点击浏览</a>
+			</div>
+			<div class="section-box">
+				<p class="neo-home-proname fn-text-overflow">
+					<a href="#product" title="西班牙原装白猪里脊肉">西班牙原装白猪里脊肉</a>
+				</p>
+				<p class="neo-short-desc fn-text-overflow">西班牙原装进口白猪里脊肉700g</p>
+				<div class="neo-price clearfix">
+					<span class="fn-left">
+						<i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-no"></i>
+					</span>
+					<span class="fn-right neo-price-num">￥258.00</span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="overlay-img scale-img">
+				<img src="images/overlayImg1.jpg" alt="">
+				<a href="" class="btn">点击浏览</a>
+			</div>
+			<div class="section-box">
+				<p class="neo-home-proname fn-text-overflow">
+					<a href="#product" title="澳大利亚进口和牛t骨牛排">澳大利亚进口和牛t骨牛排</a>
+				</p>
+				<p class="neo-short-desc fn-text-overflow">和牛的肉多汁细嫩、肌肉脂肪中饱和脂肪酸含量很低，风味独特，肉用价值极高。是全世界公认的最优秀的优良肉用牛品种。特点是，生长快、成熟早、肉质好。第七、八肋间眼肌面积达52平方厘米。</p>
+				<div class="neo-price clearfix">
+					<span class="fn-left">
+						<i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-no"></i>
+					</span>
+					<span class="fn-right neo-price-num">￥258.00</span>
+				</div>
+			</div>
+		</li>
+		<li class="middel-category-box">
+			<div class="overlay-img scale-img">
+				<img src="images/overlayImg2.jpg" alt="">
+				<a href="" class="btn">点击浏览</a>
+			</div>
+			<div class="section-box">
+				<p class="neo-home-proname fn-text-overflow">
+					<a href="#product" title="西班牙原装白猪猪舌">西班牙原装白猪猪舌</a>
+				</p>
+				<p class="neo-short-desc fn-text-overflow">猪舌可用于酱、烧、烩，如“酱猪舌”、“红烧舌片”、“烧杂烩”等。某些市场卖的舌头是熟的立即可食，但生的、烟熏的或粗盐腌的舌头常买到，煮后不论热用冷食、加不加调味料都不错。盐腌舌头通常是挤过汁的煮熟切片，一般采冷食，生舌头可加葡萄酒温煮，或水煮后添各类配饰上桌。</p>
+				<div class="neo-price clearfix">
+					<span class="fn-left">
+						<i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-no"></i>
+					</span>
+					<span class="fn-right neo-price-num">￥258.00</span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="overlay-img scale-img">
+				<img src="images/overlayImg3.jpg" alt="">
+				<a href="" class="btn">点击浏览</a>
+			</div>
+			<div class="section-box">
+				<p class="neo-home-proname fn-text-overflow">
+					<a href="#product" title="西班牙原装白猪里脊肉">西班牙原装白猪里脊肉</a>
+				</p>
+				<p class="neo-short-desc fn-text-overflow">西班牙原装进口白猪里脊肉700g</p>
+				<div class="neo-price clearfix">
+					<span class="fn-left">
+						<i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-no"></i>
+					</span>
+					<span class="fn-right neo-price-num">￥258.00</span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="overlay-img scale-img">
+				<img src="images/overlayImg5.jpg" alt="">
+				<a href="" class="btn">点击浏览</a>
+			</div>
+			<div class="section-box">
+				<p class="neo-home-proname fn-text-overflow">
+					<a href="#product" title="澳大利亚进口和牛t骨牛排">澳大利亚进口和牛t骨牛排</a>
+				</p>
+				<p class="neo-short-desc fn-text-overflow">和牛的肉多汁细嫩、肌肉脂肪中饱和脂肪酸含量很低，风味独特，肉用价值极高。是全世界公认的最优秀的优良肉用牛品种。特点是，生长快、成熟早、肉质好。第七、八肋间眼肌面积达52平方厘米。</p>
+				<div class="neo-price clearfix">
+					<span class="fn-left">
+						<i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-no"></i>
+					</span>
+					<span class="fn-right neo-price-num">￥258.00</span>
+				</div>
+			</div>
+		</li>
+		<li class="middel-category-box">
+			<div class="overlay-img scale-img">
+				<img src="images/overlayImg5.jpg" alt="">
+				<a href="" class="btn">点击浏览</a>
+			</div>
+			<div class="section-box">
+				<p class="neo-home-proname fn-text-overflow">
+					<a href="#product" title="西班牙原装白猪猪舌">西班牙原装白猪猪舌</a>
+				</p>
+				<p class="neo-short-desc fn-text-overflow">猪舌可用于酱、烧、烩，如“酱猪舌”、“红烧舌片”、“烧杂烩”等。某些市场卖的舌头是熟的立即可食，但生的、烟熏的或粗盐腌的舌头常买到，煮后不论热用冷食、加不加调味料都不错。盐腌舌头通常是挤过汁的煮熟切片，一般采冷食，生舌头可加葡萄酒温煮，或水煮后添各类配饰上桌。</p>
+				<div class="neo-price clearfix">
+					<span class="fn-left">
+						<i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-no"></i>
+					</span>
+					<span class="fn-right neo-price-num">￥258.00</span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="overlay-img scale-img">
+				<img src="images/overlayImg5.jpg" alt="">
+				<a href="" class="btn">点击浏览</a>
+			</div>
+			<div class="section-box">
+				<p class="neo-home-proname fn-text-overflow">
+					<a href="#product" title="西班牙原装白猪里脊肉">西班牙原装白猪里脊肉</a>
+				</p>
+				<p class="neo-short-desc fn-text-overflow">西班牙原装进口白猪里脊肉700g</p>
+				<div class="neo-price clearfix">
+					<span class="fn-left">
+						<i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-on"></i><i class="icon-star icon-star-no"></i>
+					</span>
+					<span class="fn-right neo-price-num">￥258.00</span>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+

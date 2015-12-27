@@ -1,0 +1,95 @@
+
+<script>
+	$(function(){
+		
+		$(".nav-line").width( $(".nav .active").outerWidth() ).css("left", $(".nav .active").position().left);
+		$(".nav li").hover(function(){
+			var _left = $(this).position().left;
+
+			$(".nav-line").stop().animate({
+				left : _left+"px",
+				width : $(this).outerWidth() + "px"
+			},200);
+		},function(){
+			var _left = $(".nav .active").position().left;
+			$(".nav-line").stop().animate({
+				left : _left + "px",
+				width : $(".nav .active").outerWidth() + "px"
+			},200);
+		});
+		$(".nav li").click(function(){
+			$(this).addClass('active').siblings().removeClass('active');
+		});
+
+	})
+
+	// var m2 = angular.module('myApp', ['ngRoute']);
+	// m2.controller("head", ["$scope", "$http", function($scope, $http){
+
+		// $http({
+		// 	method : "GET",
+		// 	url : "data/header.json"
+		// }).success(function(data, state, headers, config){
+		// 	console.log(data);
+		// });
+
+		// $http.get("data/header.json").success(function(data, state, headers, config){
+		// 	alert(0)
+		// 	console.log(data);
+		// });
+
+		// $scope.test = "yangzhenlie";
+
+	// }])
+</script>
+
+<!-- 顶部 -->
+<div class="top-header">
+	<div class="wrap">
+		<div class="left fn-left">
+			欢迎来到鲜到先得冷鲜平台
+		</div>
+		<ul class="right fn-right">
+			<li><a href="login.html">登录</a></li>
+			<li>|</li>
+			<li><a href="login.html">注册</a></li>
+			<li>|</li>
+			<li class="top-cart-box">
+				<a href="#cart" class="top-cart-text">购物车( <span class="red-col">2</span> )</a>
+				<div class="top-cart-box">
+					<ul class="list clearfix">
+						<li class="clearfix">
+							<a href="#product" title="澳大利亚进口和牛t骨牛排" class="left-name fn-text-overflow fn-left">澳大1利亚进口和牛t骨牛排澳大利亚进口和牛t骨牛排</a>
+							<a href="javascript:;" class="red-col fn-right">删除</a>
+						</li>
+						<li class="clearfix">
+							<a href="#product" title="澳大利亚进口和牛t骨牛排" class="left-name fn-text-overflow fn-left">澳大利亚进口和牛t骨牛排</a>
+							<a href="javascript:;" class="red-col fn-right">删除</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!-- logo -->
+<div class="logo-header wrap clearfix">
+	<div class="logo clearfix">
+		<h1 class="fn-left"><a href="#index">鲜到先得</a></h1>
+	</div>
+</div>
+
+<!-- 菜单 -->
+<div class="nav">
+	<div class="wrap">
+		<ul class="clearfix">
+			<li class="active"><a href="#index">首页</a></li>
+			<li><a href="#list">冷鲜展览</a></li>
+			<li><a href="#found">探索发现</a></li>
+			<li><a href="#member">会员中心</a></li>
+			<li><a href="#about">关于我们</a></li>
+		</ul>
+		<div class="nav-line"></div>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp" id="ng-app" xmlns:ng="http://angularjs.org">
+<head>
+	<meta charset="utf-8">
+	<!-- <title>跨境电商-潜冠科技有限公司</title> -->
+
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/nprogress.css" rel="stylesheet" type="text/css" />
+
+	<script src="js/jquery.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.29/angular.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.29/angular-route.min.js"></script> -->
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/nprogress.js"></script>
+
+	<script>
+		var m1 = angular.module('myApp', ['ngRoute']);
+		m1.controller("head", ["$scope", "$http", function($scope, $http){
+			$http({
+				method : "GET",
+				url : "data/header.json"
+			}).success(function(data, state, headers, config){
+				$scope.test = data.name;
+			});
+		}])
+	</script>
+
+</head>
+<body ng-controller="head">
+    
+	{{test}}
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="myApp" id="ng-app" xmlns:ng="http://angularjs.org">
+<head>
+	<meta charset="utf-8">
+	<!-- <title>跨境电商-潜冠科技有限公司</title> -->
+
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/nprogress.css" rel="stylesheet" type="text/css" />
+
+	<script src="js/jquery.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.29/angular.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.29/angular-route.min.js"></script> -->
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/nprogress.js"></script>
+
+	<script src="js/app.js"></script>
+
+	<script>
+		$(function(){
+
+			(function(){
+				NProgress.start();
+				NProgress.configure({ ease: 'ease', speed: 500 });
+
+				document.onreadystatechange = function(){
+		            if (document.readyState == "complete"){
+		            	setTimeout(function(){
+		                	NProgress.done();
+		            	}, 500)
+		            }
+		        }
+			})()
+			
+		})
+
+	</script>
+	<!--[if lt IE 9]>
+	<script src="http://www.angularjs.cn/wp-content/themes/angularjs/js/html5.js"></script>
+	<![endif]-->
+	<!--[if lte IE 7]>
+	<script src="js/json2.js"></script>
+	<![endif]-->
+</head>
+<body>
+    
+	<!-- 头部开始 -->
+	<div ng-include="'header.html'"></div>
+	<!-- 头部结束 -->
+
+
+	<!-- 正文开始 -->
+	<div class="view-container">
+		<div ng-view class="view-frame"></div>
+	</div>
+	<!-- 正文结束 -->
+
+
+	<!-- 底部开始 -->
+	<div ng-include="'footer.html'"></div>
+	<!-- 底部结束 -->
+
+</body>
+</html>
