@@ -65,7 +65,7 @@
 .icon-star-on{background: url(../images/star.png) -7px -5px;}
 .icon-star-no{background: url(../images/star.png) -7px -22px;}
 .scale-img img{transition: .5s;}
-.scale-img:hover img{-webkit-transform: scale(0.9); -moz-transform: scale(0.9); transform: scale(0.9);}
+.scale-img:hover img{-webkit-transform: scale(1.1); -moz-transform: scale(1.1); transform: scale(1.1);}
 .scale-img:hover .btn{-webkit-transform: translateX(300px); -moz-transform: translateX(300px); transform: translateX(300px);}
 figure.xp-effect {
 	position: relative;
